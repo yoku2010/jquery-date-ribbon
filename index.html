@@ -1,0 +1,23 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+		<title>jQuery Date Ribbon</title>
+		<link rel="stylesheet" type="text/css" href="date.ribbon.css" />
+		<script src="http://code.jquery.com/jquery-latest.min.js" type="text/javascript"></script>
+		<script src="blue.json.date.ribbon.js" type="text/javascript"></script>
+		<script type="text/javascript">
+			$(function(){
+				$("#ribbon1").dateRibbon({titleFormate:"days",date:new Date(2013,6,11)});
+				$("#ribbon2").dateRibbon({titleFormate:"weeks",date:new Date(2002,2,21)});
+				$("#ribbon3").dateRibbon({titleFormate:"months",date:new Date(2002,2,21)});
+			});
+		</script>
+	</head>
+	<body>
+		<h2>jQuery Date Ribbon</h2>
+		<div id="ribbon1"></div>
+		<div id="ribbon2"></div>
+		<div id="ribbon3"></div>
+	</body>
+</html>
