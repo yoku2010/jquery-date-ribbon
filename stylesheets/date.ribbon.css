@@ -1,0 +1,122 @@
+/*
+===========================================================================
+* CSS for Date Ribbon
+* Created by - Yogesh Kumar
+* Version - 1.0
+* Date - 21-June-2012
+* browser - IE7+, FF3.6+,Chrome10+
+* Website - http://www.bluejson.in
+* Copyright (c) 2012 Yogesh Kumar (http://www.bluejson.in)
+===========================================================================
+*/
+body{
+	font-family: 'Helvetica Neue Light', HelveticaNeue-Light, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	font-size: 14px;
+	margin: 0;
+	outline: none;
+	padding: 0;
+}
+div{
+	display: block;
+}
+.ribbon {
+	position: relative;
+	margin:10px;
+	display: inline-block;
+	text-align: center;
+	width: 35px;
+}
+a.ribbon {
+	color: #EEE;
+	cursor: pointer;
+	text-decoration: none;
+}
+a.ribbon:focus {
+	color: rgba(0, 158, 184, 1);
+	outline: none;
+	text-decoration: none;
+	-moz-transition: color .3s;
+	-ms-transition: color .3s;
+	-o-transition: color .3s;
+	-webkit-transition: color .3s;
+	transition: color .3s;
+}
+.ribbon .ribbon-piece {
+	background-color: #666;
+	-moz-box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+	-ms-box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+	-o-box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+	-webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+	box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+	-moz-transition: background-color 0.5s ease-in;
+	-ms-transition: background-color 0.5s ease-in;
+	-o-transition: background-color 0.5s ease-in;
+	-webkit-transition: background-color 0.5s ease-in;
+	transition: background-color 0.5s ease-in;
+}
+.ribbon .top {
+	border-bottom: solid 1px #EEE;
+	-moz-border-radius: 1px 1px 0px 0px;
+	-ms-border-radius: 1px 1px 0px 0px;
+	-o-border-radius: 1px 1px 0px 0px;
+	-webkit-border-radius: 1px 1px 0px 0px;
+	border-radius: 1px 1px 0px 0px;
+	font-size: 11px;
+	padding: 4px 0;
+	position: relative;
+	text-transform: uppercase;
+}
+.ribbon .bottom {
+	font-size: 17px;
+	padding: 5px 0;
+}
+.ribbon .tail {
+	height: 10px;
+	overflow: hidden;
+	position: relative;
+	border:0px none;
+}
+.ribbon .tail .left, .ribbon .tail .right {
+	height: 10px;
+	position: absolute;
+	top: -10px;
+	width: 50px;
+}
+a.ribbon:hover .ribbon-piece {
+	background-color: #AD3A2B;
+	color: #EEEEEE;
+}
+.ribbon .tail .left {
+	left: -9px;
+	-moz-transform: rotate(-25deg);
+	/*-ms-transform: rotate(-25deg);*/
+	-o-transform: rotate(-25deg);
+	-webkit-transform: rotate(-25deg);
+	transform: rotate(-25deg);
+	/* IE6 and 7 */
+	filter: progid:DXImageTransform.Microsoft.Matrix(
+		M11=0.9063077870366499,
+		M12=0.42261826174069955,
+		M21=-0.42261826174069955,
+		M22=0.9063077870366499,
+		SizingMethod='auto expand');
+	/* IE8+ - must be on one line, unfortunately */
+	-ms-filter: "progid:DXImageTransform.Microsoft.Matrix(M11=0.9063077870366499, M12=0.42261826174069955, M21=-0.42261826174069955, M22=0.9063077870366499, SizingMethod='auto expand')";
+}
+.ribbon .tail .right {
+	right: -9px;
+	-moz-transform: rotate(25deg);
+	/*-ms-transform: rotate(25deg);*/
+	-o-transform: rotate(25deg);
+	-webkit-transform: rotate(25deg);
+	transform: rotate(25deg);
+	/* IE6 and 7 */
+	filter: progid:DXImageTransform.Microsoft.Matrix(
+		M11=0.9063077870366497,
+		M12=-0.4226182617407,
+		M21=0.4226182617407,
+		M22=0.9063077870366497,
+		SizingMethod='auto expand');
+	/* IE8+ - must be on one line, unfortunately */
+	-ms-filter: "progid:DXImageTransform.Microsoft.Matrix(M11=0.9063077870366497, M12=-0.4226182617407, M21=0.4226182617407, M22=0.9063077870366497, SizingMethod='auto expand')";
+}

@@ -7,12 +7,16 @@
     <link href='https://fonts.googleapis.com/css?family=Architects+Daughter' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen" />
     <link rel="stylesheet" type="text/css" href="stylesheets/pygment_trac.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="stylesheets/date.ribbon.css" media="screen" />
     <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print" />
 
     <!--[if lt IE 9]>
     <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
-
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <script src="javascripts/blue.json.date.ribbon.min.js"></script>
+    <script src="javascripts/main.js"></script>
+    
     <title>jQuery Date Ribbon by yoku2010</title>
   </head>
 
@@ -28,32 +32,103 @@
     <div id="content-wrapper">
       <div class="inner clearfix">
         <section id="main-content">
-          <h3>Welcome to GitHub Pages.</h3>
+          <h3>Description</h3>
 
-<p>This automatic page generator is the easiest way to create beautiful pages for all of your projects. Author your page content here using GitHub Flavored Markdown, select a template crafted by a designer, and publish. After your page is generated, you can check out the new branch:</p>
+<p>This jQuery plugin creates a date ribbon for your website. Currently this is available only in one theme. Soon i will be launch it in 5 themes more.</p>
+<p><code>Current version: 1.0</code></p>
+<p>Download this plugin and use it to display date in a new style on your website.</p>
 
-<pre><code>$ cd your_repo_root/repo_name
-$ git fetch origin
-$ git checkout gh-pages
+<h3>Features</h3>
+
+<p><ul><li>Fully customized</li><li>Tested in: jQuery 1.4.3+ in Firefox, Safari, Chrome, Internet Explorer 7, 8, 9, Opera 11</li><li>Lightweight: 7KB of JavaScript (less than 3KBs gzipped).</li><li>Load before and load after callback</li></ul></p>
+
+<h3>Instructions & Help</h3>
+
+<p>First read usage of plugin (see below). If you found any issue or want any help submit it at <a class="user-mention" href="https://github.com/yoku2010/jQueryDateRibbon">GitHub</a> or email me <a class="user-mention" href="mailto:yoku2010@gmail.com">yoku2010@gmail.com</a></p>
+
+<h3>Usage</h3>
+
+<p>Date Ribbon accepts settings from an object of key/value pairs <code>(JSON)</code>, and can be assigned to any HTML element.</p>
+
+<pre><code>// Format:
+$(selector).dateRibbon({key:value, key:value, key:value});
 </code></pre>
 
-<p>If you're using the GitHub for Mac, simply sync your repository and you'll see the new branch.</p>
+<pre><code>// Examples:
+$("#ribbon1").dateRibbon({
+			title: "GitHub",
+			className: "ribbon",
+			href:"https://github.com/yoku2010/jQueryDateRibbon",
+			target:"_blank",
+			date:new Date()
+		});
+$("#ribbon2").dateRibbon({
+			titleFormat:"days"
+			className: "ribbon",
+			href:"https://github.com/yoku2010/jQueryDateRibbon",
+			target:"_blank",
+			date:new Date(2012,8,12)
+		});
+</code></pre>
 
-<h3>Designer Templates</h3>
+<h3>Demo</h3>
+<pre><div id="ribbon1" class="rib"></div> <div id="ribbon2" class="rib"></div></pre>
 
-<p>We've crafted some handsome templates for you to use. Go ahead and continue to layouts to browse through them. You can easily go back to edit your page before publishing. After publishing your page, you can revisit the page generator and switch to another theme. Your Page content will be preserved if it remained markdown format.</p>
-
-<h3>Rather Drive Stick?</h3>
-
-<p>If you prefer to not use the automatic generator, push a branch named <code>gh-pages</code> to your repository to create a page manually. In addition to supporting regular HTML content, GitHub Pages support Jekyll, a simple, blog aware static site generator written by our own Tom Preston-Werner. Jekyll makes it easy to create site-wide headers and footers without having to copy them across every page. It also offers intelligent blog support and other advanced templating features.</p>
-
-<h3>Authors and Contributors</h3>
-
-<p>You can <a href="https://github.com/blog/821" class="user-mention">@mention</a> a GitHub username to generate a link to their profile. The resulting <code>&lt;a&gt;</code> element will link to the contributor's GitHub Profile. For example: In 2007, Chris Wanstrath (<a href="https://github.com/defunkt" class="user-mention">@defunkt</a>), PJ Hyett (<a href="https://github.com/pjhyett" class="user-mention">@pjhyett</a>), and Tom Preston-Werner (<a href="https://github.com/mojombo" class="user-mention">@mojombo</a>) founded GitHub.</p>
-
-<h3>Support or Contact</h3>
-
-<p>Having trouble with Pages? Check out the documentation at <a href="http://help.github.com/pages">http://help.github.com/pages</a> or contact <a href="mailto:support@github.com">support@github.com</a> and we’ll help you sort it out.</p>
+<h3>Settings</h3>
+<p>
+<table>
+	<thead>
+		<tr>
+			<th>Property</th>
+			<th>Default</th>
+			<th>Description</th>
+		</tr>
+	<thead>
+	<tbody>
+		<tr>
+			<td class="pro">title</td>
+			<td>null</td>
+			<td>This can be use to change title of the date ribbon.</td>
+		</tr>
+		<tr>
+			<td class="pro">titleFormat</td>
+			<td>days</td>
+			<td>The title Format . Can be set to "days", "weeks", "months", or "years".</td>
+		</tr>
+		<tr>
+			<td class="pro">className</td>
+			<td>ribbon</td>
+			<td>Class name of date ribbon</td>
+		</tr>
+		<tr>
+			<td class="pro">href</td>
+			<td>#</td>
+			<td>Date ribbon href location or JavaScript function name</td>
+		</tr>
+		<tr>
+			<td class="pro">target</td>
+			<td>null</td>
+			<td>href location target can be set to "_blank", "_self","_parent","_top" or "frame-name"</td>
+		</tr>
+		<tr>
+			<td class="pro">date</td>
+			<td>new Date()</td>
+			<td>Date to show in date ribbon</td>
+		</tr><tr>
+			<td class="pro">functionBefore</td>
+			<td>function () { return true; }</td>
+			<td>To fire a function just before date ribbon load. If function return true then create ribbon otherwise no</td>
+		</tr>
+		<tr>
+			<td class="pro">functionAfter</td>
+			<td>function () { }</td>
+			<td>To fire a function just after date ribbon load.</td>
+		</tr>
+	</tbody>
+</table>
+</p>
+<p>Follow me on <a class="user-mention" href="https://twitter.com/yogeshk2010">Twitter</a>,<a class="user-mention" href="https://github.com/yoku2010">GitHub</a>,<a class="user-mention" href="http://www.linkedin.com/pub/yogesh-kumar/22/1b0/997">LinkedIn</a> or <a class="user-mention" href="http://www.facebook.com/yoku2010">Facebook</a></p>
+<p><code><a href="http://www.bluejson.com">www.bluejson.com</a></code> <code><a href="http://www.bluejson.in">www.bluejson.in</a></code> <code><a href="http://www.bluepython.in">www.bluepython.in</a></code></p>
         </section>
 
         <aside id="sidebar">
@@ -68,7 +143,7 @@ $ git checkout gh-pages
 
           <p class="repo-owner"><a href="https://github.com/yoku2010/jQueryDateRibbon"></a> is maintained by <a href="https://github.com/yoku2010">yoku2010</a>.</p>
 
-          <p>This page was generated by <a href="pages.github.com">GitHub Pages</a> using the Architect theme by <a href="http://twitter.com/jasonlong">Jason Long</a>.</p>
+          <p>This page was generated by <a href="http://pages.github.com">GitHub Pages</a>.</p>
         </aside>
       </div>
     </div>
