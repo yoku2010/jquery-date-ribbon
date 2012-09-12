@@ -8,7 +8,7 @@
 * Website - http://www.bluejson.in
 * This JQuery File use to create date ribbon
 * Requires jquery-1.4.2.js or higher
-* Copyright (c) 2012 Yogesh Kumar (http://www.bluejson.in)
+* Copyright (c) 2012 Yogesh Kumar (http://www.bluejson.in or http://www.bluejson.com)
 ===========================================================================
 */
 (function($) {
@@ -16,7 +16,7 @@
 		dateRibbon: function (settings) {
 			settings = jQuery.extend({
 				title: null,						// use this if you want to change title of the date ribbon.
-				titleFormate: "days",					// value - days,weeks,months,years.
+				titleFormat: "days",					// value - days,weeks,months,years.
 				className: "ribbon",					// use this if you want to set class or theme of date ribbon.
 				href:"#",						// date ribbon href location or JavaScript function name.
 				target:null,						// href location target (_blank|_self|_parent|_top|frame-name)
@@ -34,7 +34,7 @@
 		var drObj = {
 			version:"1.0",					// this stores the version of date ribbon.
 			author:"Yogesh Kumar",				// this stores the author name.
-			website:"www.bluejson.in",			// this stores website name.
+			website:"www.bluejson.com",			// this stores website name.
 			obj: {
 				$this: $(thisObj)			// create container object.
 			},
@@ -135,13 +135,13 @@
 						else if(options.date > today)
 						{
 							timestamp = drObj.ribbonFunction.getDateDifference(options.date,today);
-							title = parseInt(timestamp/formate[options.titleFormate]) + " " + options.titleFormate + " ahead";
+							title = parseInt(timestamp/formate[options.titleFormat]) + " " + options.titleFormat + " ahead";
 						}
 						// check today date is greater then user given date
 						else if (options.date < today)
 						{
 							timestamp = drObj.ribbonFunction.getDateDifference(today,options.date);
-							title = parseInt(timestamp/formate[options.titleFormate]) + " " + options.titleFormate + " ago";
+							title = parseInt(timestamp/formate[options.titleFormat]) + " " + options.titleFormat + " ago";
 						}
 						return title;							// return title
 					}
