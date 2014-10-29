@@ -11,4 +11,4 @@ This Plugin Create Date Ribbon
 * Website - http://www.bluejson.com
 * This JQuery Plugin use to create date ribbon
 * Requires jquery-1.4.2.js or higher
-* Copyright (c) 2012 Yogesh Kumar (http://www.bluejson.com)
+* Copyright (c) 2014 bluejson (http://www.bluejson.com)

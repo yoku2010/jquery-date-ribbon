@@ -3,12 +3,12 @@
 * jQuery Date Ribbon
 * Created by - Yogesh Kumar
 * Version - 1.0
-* Date - 21-June-2012
+* Date - 20-Oct-2014
 * browser - IE7+, FF3.6+,Chrome10+
-* Website - http://www.bluejson.in
+* Website - http://www.bluejson.com
 * This JQuery File use to create date ribbon
 * Requires jquery-1.4.2.js or higher
-* Copyright (c) 2012 Yogesh Kumar (http://www.bluejson.in or http://www.bluejson.com)
+* Copyright (c) 2014 bluejson (http://www.bluejson.com)
 ===========================================================================
 */
 (function($) {
